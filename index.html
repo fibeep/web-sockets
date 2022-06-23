@@ -36,12 +36,19 @@
         }
     });
 
+    // socket.on('connection', (socket) => {
+    //     socket.emit('chat message', "Someone Has Connected")
+    // })
+
     socket.on('chat message', function (msg) {
         var item = document.createElement('li');
         item.textContent = msg;
         messages.appendChild(item);
         window.scrollTo(0, document.body.scrollHeight);
     });
+
+
+
 </script>
   </body>
 </html>
